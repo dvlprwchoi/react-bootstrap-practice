@@ -5,7 +5,7 @@ function Cards() {
   return (
     <div className="cards">
       <h2>Cards</h2>
-      <Card style={{ width: '30rem' }}>
+      <Card border="success" style={{ width: '30rem' }}>
         <Card.Img
           variant="top"
           src="https://github.com/dvlprwchoi/portfolio-2/blob/main/src/img/dev-blog-img-20220127.png?raw=true"
@@ -64,6 +64,20 @@ function Cards() {
             Go to live site
           </Button>
         </Card.Body>
+      </Card>
+      <Card border="danger">
+        <Card.Header>Featured</Card.Header>
+        <Card.Body>
+          <Card.Title>Header: Featured</Card.Title>
+          <Card.Text>
+            With supporting text below as a natural lead-in to additional
+            content.
+          </Card.Text>
+          <Button variant="warning" size="sm">
+            Go somewhere
+          </Button>
+        </Card.Body>
+        <Card.Footer>This is footer</Card.Footer>
       </Card>
     </div>
   );
