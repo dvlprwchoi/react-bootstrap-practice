@@ -2,14 +2,14 @@ import { Tabs, Tab } from 'react-bootstrap';
 import Buttons from '../Buttons/Buttons';
 import Cards from '../Cards/Cards';
 import Modals from '../Modals/Modals';
-import Home from '../Home/Home';
+import Carousels from '../Carousels/Carousels';
 
 function NavTabs() {
   return (
     <div className="tabs">
-      <Tabs defaultActiveKey="home">
-        <Tab title="Home" eventKey="home">
-          <Home />
+      <Tabs defaultActiveKey="carousels">
+        <Tab title="Carousels" eventKey="carousels">
+          <Carousels />
         </Tab>
         <Tab title="Buttons" eventKey="buttons">
           <Buttons />
