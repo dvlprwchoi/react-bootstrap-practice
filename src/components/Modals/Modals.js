@@ -11,6 +11,14 @@ function Modals() {
     setShow(false);
   };
 
+  const [show3, setShow3] = useState(false);
+  const _show3 = () => {
+    setShow3(true);
+  };
+  const _close3 = () => {
+    setShow3(false);
+  };
+
   return (
     <>
       <div className="modals">
@@ -53,6 +61,33 @@ function Modals() {
               <Button variant="success" onClick={_close}>
                 Save changes
               </Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
+        <div className="modal-3">
+          <h3>Modal 3</h3>
+          <Button variant="outline-success" size="lg" onClick={_show3}>
+            Open backdrop modal 3
+          </Button>
+
+          <Modal
+            show={show3}
+            onHide={_close3}
+            backdrop="static"
+            keyboard={false}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>Modal 3</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              I will not close if you click outside me. Don't even try to press
+              escape key.
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={_close3}>
+                Close
+              </Button>
+              <Button variant="primary">Understood</Button>
             </Modal.Footer>
           </Modal>
         </div>
